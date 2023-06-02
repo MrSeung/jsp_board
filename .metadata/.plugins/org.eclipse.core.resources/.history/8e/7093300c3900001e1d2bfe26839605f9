@@ -1,0 +1,88 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+	crossorigin="anonymous">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+	crossorigin="anonymous"></script>
+	<style>
+		.card{
+			display: inline-block;
+			margin: 30px;
+		}
+	</style>
+	
+</head>
+<body>
+	<!-- search -->
+	<form action="/brd/search" method="post">
+	<div>
+		<c:set value="${pvo.type}" var="typed"></c:set>
+		<select name="type">
+			<option ${typed == null? 'selected':'' }>Chooose...</option>
+			<option value="t" ${typed == 't'? 'selected':'' }>title</option>
+			<option value="c" ${typed == 't'? 'selected':'' }>content</option>
+			<option value="w" ${typed == 't'? 'selected':'' }>writer</option>
+			<option value="tc" ${typed == 'tc'? 'selected':'' }>title or content</option>
+			<option value="tw" ${typed == 'tw'? 'selected':'' }>title or writer</option>
+			<option value="cw" ${typed == 'cw'? 'selected':'' }>content or writer</option>
+		</select>
+	<input type="text" name="search" placeholder="Search">
+	<input type="hidden" name="pageNo" value="">
+	<button> 검색</button>
+	</div>
+	</form>
+	<c:forEach items="${list}" var="bvo">
+
+		<!-- action을 댓글의 list를 먼저 타고 보드의 detail을 가면?/ -->
+		<form action="/brd/detail" method="post">
+			<div class="card" style="width: 18rem;">
+					<c:if test="${bvo.image_file ne '' && bvo.image_file ne null}">
+						<img alt="없음" src="/_fileUpload/${bvo.image_file}" class="card-img-top">
+					</c:if>
+					<c:if test="${bvo.image_file eq '' && bvo.image_file eq null}">
+        				<img src="/image/dice.jpg" class="card-img-top" alt="">
+					</c:if>
+				<div class="card-body">
+					<input type="hidden" name="bno" value="${bvo.bno}">
+					<h5 class="card-title">${bvo.title}</h5>
+			        <p class="card-text">${bvo.content}</p>
+					<button class="btn btn-primary" id="detail">상세보기</button>
+					조회수 : ${bvo.readcount}
+				</div>
+			</div>
+		</form>
+	</c:forEach>
+	<br>
+
+	<a href="/brd/go_register"><button>글쓰기</button></a>
+	<a href="/"><button>index</button></a>
+	<br>
+	<br>
+	
+	<!-- 이전 버튼 -->
+	<c:if test="${ph.prevPage >= 0}">
+		<a href="/brd/list?pagenum=${ph.prevPage}"><button>이전</button></a>
+	</c:if>
+	<!-- 페이지 번호 출력 -->
+	<c:forEach var="i" begin="${ph.startPage}" end="${ph.endPage}">
+		<a href="/brd/list?pagenum=${i}">${i+1}</a>
+	</c:forEach>
+	<!-- 다음 버튼 -->
+	<c:if test="${(ph.nextPage+1) <= ph.totalPages}">
+		<a href="/brd/list?pagenum=${ph.nextPage}"><button>다음</button></a>
+	</c:if>
+
+
+</body>
+</html>

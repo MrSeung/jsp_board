@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>login page</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+</style>
+<body>
+	<form action="/mem/login_auth" method="post">
+	<!-- 
+		ID : <input type="text" name="id"><br><br>
+		PW : <input type="text" name="password"><br><br>
+		<button type="submit">login</button>
+	 -->
+	 <h3>로그인</h3> <br>
+        <label for="email">이메일 주소:</label>
+        <input type="text" id="email" name="id" required>
+        <label for="password">비밀번호:</label>
+        <input type="text" id="password" name="password" required>
+        <div id="btn-join">
+            <input type="submit" value="로그인">
+        </div>
+        <br><br>
+        <div class="forget">
+            아직 회원이 아니신가요? <a href="">회원가입</a>
+        </div>
+        <br>
+	</form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+
+5월 17, 2023 17:13:39.197 NEW SESSION
+5월 17, 2023 17:13:39.197 [11728:4476:0517/171339.196:ERROR:interface_endpoint_client.cc(696)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 17, 2023 17:13:39.197 [11728:4476:0517/171339.196:ERROR:interface_endpoint_client.cc(696)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+5월 18, 2023 09:23:09.798 NEW SESSION
+5월 18, 2023 09:23:09.798 [10196:10164:0518/092309.797:ERROR:interface_endpoint_client.cc(696)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 18, 2023 11:14:56.372 [10196:10164:0518/111456.372:ERROR:interface_endpoint_client.cc(696)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 18, 2023 15:48:54.988 [10196:10164:0518/154854.988:ERROR:interface_endpoint_client.cc(696)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 18, 2023 15:48:54.989 [10196:10164:0518/154854.988:ERROR:interface_endpoint_client.cc(696)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 18, 2023 15:48:54.989 [10196:10164:0518/154854.988:ERROR:interface_endpoint_client.cc(696)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 18, 2023 16:50:23.292 [10196:10164:0518/165023.292:ERROR:interface_endpoint_client.cc(696)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 18, 2023 16:50:23.292 [10196:10164:0518/165023.292:ERROR:interface_endpoint_client.cc(696)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+5월 23, 2023 13:17:42.902 NEW SESSION
+5월 23, 2023 13:17:42.902 [6260:5760:0523/131742.902:ERROR:device_event_log_impl.cc(222)] [13:17:42.912] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+5월 23, 2023 14:06:46.867 [6260:5760:0523/140646.867:ERROR:interface_endpoint_client.cc(696)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 23, 2023 14:14:23.306 [6260:5760:0523/141423.306:ERROR:interface_endpoint_client.cc(696)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 23, 2023 14:14:23.306 [6260:5760:0523/141423.306:ERROR:interface_endpoint_client.cc(696)] Message 1 rejected by interface blink.mojom.WidgetHost
+5월 23, 2023 14:14:23.306 [6260:5760:0523/141423.306:ERROR:interface_endpoint_client.cc(696)] Message 1 rejected by interface blink.mojom.WidgetHost
